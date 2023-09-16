@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  /* Adjust the property card layout for smaller screens */
+  .property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .property-card {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  /* Ensure the modal content fits on smaller screens */
+  .modal-content {
+    max-width: 90%;
+  }
+  
+  /* Ensure the close button is visible on smaller screens */
+  .close-button {
+    top: 5px;
+    right: 5px;
+  }
+  
+  /* Make the buttons in the modal full width on mobile */
+  .modal-content button {
+    width: 100%;
+  }
+}
+
