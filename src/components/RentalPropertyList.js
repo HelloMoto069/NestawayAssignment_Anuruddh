@@ -25,7 +25,6 @@ function RentalPropertyList(props) {
   const {
     openPropertyDetails,
     openBookingForm,
-    closeBookingForm,
     properties,
     isBookingFormOpen,
   } = props;
@@ -46,7 +45,7 @@ function RentalPropertyList(props) {
   return (
     <div>
       <div>
-        <Navbar style={{ marginRight: "50%", backgroundColor: "#a0c7db" }}>
+        <Navbar style={{  backgroundColor: "#a0c7db" }}>
           <Container>
             <Navbar.Brand href="#home">
               <img
@@ -79,12 +78,12 @@ function RentalPropertyList(props) {
           aria-label="breadcrumb"
           style={{
             backgroundColor: "#a0c7db",
-            marginRight: "50%",
-            paddingLeft: "40px",
+            textAlign: "center",
+            
           }}
         >
-          <ol className="breadcrumb">
-            <li className="breadcrumb-item active">Home</li>
+          <ol className="breadcrumb" >
+            <li className="breadcrumb-item active" >Home</li>
             <li className="breadcrumb-item ">{location}</li>
             <li className="breadcrumb-item " aria-current="page">
               Category
@@ -107,7 +106,7 @@ function RentalPropertyList(props) {
           <>
             <div
               class="card"
-              style={{ width: "30rem", marginLeft: "5%", marginBottom: "20px", backgroundColor: "#a0c7db" }}
+              style={{ width: "30rem", marginLeft: "auto", marginRight: "auto" ,marginBottom: "20px", backgroundColor: "#a0c7db" }}
               key={index}
             >
               <img
