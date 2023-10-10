@@ -16,6 +16,7 @@ function BookingForm({ closeBookingForm, submitBooking }) {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(name, value);
     setFormData({
       ...formData,
       [name]: value,
@@ -86,66 +87,99 @@ function BookingForm({ closeBookingForm, submitBooking }) {
           <>
             <h2>Booking Form</h2>
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label>Name:</label>
+              <div
+                class="form-floating"
+                style={{
+                  marginTop: "10px",
+                }}
+              >
                 <input
                   type="text"
                   name="name"
+                  class="form-control"
+                  id="floatingInputGrid"
+                  placeholder="Enter Your Name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
                 />
+                <label for="floatingInputGrid">Name:</label>
                 {errors.name && <div className="error">{errors.name}</div>}
               </div>
-              <div className="form-group">
-                <label>Email:</label>
+              <div class="form-floating" style={{
+                  marginTop: "10px",
+                }}>
                 <input
                   type="email"
                   name="email"
+                  class="form-control"
+                  id="floatingInputGrid"
+                  placeholder="Enter Your Mail"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
                 />
+                <label for="floatingInputGrid">E Mail:</label>
                 {errors.email && <div className="error">{errors.email}</div>}
               </div>
-              <div className="form-group">
-                <label>Phone:</label>
+              <div class="form-floating" style={{
+                  marginTop: "10px",
+                }}>
                 <input
                   type="tel"
                   name="phone"
+                  class="form-control"
+                  id="floatingInputGrid"
+                  placeholder="Enter Your Phone No."
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
                 />
+                <label for="floatingInputGrid">Phone No.:</label>
                 {errors.phone && <div className="error">{errors.phone}</div>}
               </div>
-              <div className="form-group">
-                <label>Check-In Date:</label>
+              <div class="form-floating" style={{
+                  marginTop: "10px",
+                }}>
                 <input
                   type="date"
                   name="checkInDate"
+                  class="form-control"
+                  id="floatingInputGrid"
+                  placeholder="Check In Date:"
                   value={formData.checkInDate}
                   onChange={handleInputChange}
                   required
                 />
+                <label for="floatingInputGrid">Check In date:</label>
                 {errors.checkInDate && (
                   <div className="error">{errors.checkInDate}</div>
                 )}
               </div>
-              <div className="form-group">
-                <label>Check-Out Date:</label>
+              <div class="form-floating" style={{
+                  marginTop: "10px",
+                }}>
                 <input
                   type="date"
                   name="checkOutDate"
+                  class="form-control"
+                  id="floatingInputGrid"
+                  placeholder="Check Out Date:"
                   value={formData.checkOutDate}
                   onChange={handleInputChange}
                   required
                 />
+                <label for="floatingInputGrid">Check Out date:</label>
                 {errors.checkOutDate && (
                   <div className="error">{errors.checkOutDate}</div>
                 )}
               </div>
-              <button class="btn btn-success" type="submit">Book Now</button>
+
+              <button class="btn btn-success" type="submit" style={{
+                  marginTop: "17px",
+                }}>
+                Book Now
+              </button>
             </form>
           </>
         )}
